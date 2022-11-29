@@ -1,5 +1,8 @@
-<h1>{{ sections.settings.actext }}</h1>
+{% if section.settings.show_announcement %}
 
+  {{ section.settings.text | upcase }}
+
+{% endif  %}
 
 
 {% schema %}
@@ -7,10 +10,15 @@
     "name": "kazi-ac",
     "settings": [
       {
+        "type": "checkbox",
+        "id": "show_announcement",
+        "label": "Show announcement",
+        "default": true
+      }, {
         "type": "text",
-        "id": "actext",
-        "default": "Welcome to our store",
-        "label": "Input AC"
+        "id": "text",
+        "label": "Announcement",
+        "default": "Your Announcement"
       }
     ]
   }
