@@ -1,1 +1,17 @@
-<h1>Hello Kazi</h1>
+<h1>{{ sections.settings.actext }}</h1>
+
+
+
+{% schema %}
+  {
+    "name": "Something",
+    "settings": [
+      {
+        "type": "text",
+        "id": "actext",
+        "default": "Welcome to our store",
+        "label": "Input AC"
+      }
+    ]
+  }
+{% endschema %}
