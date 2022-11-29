@@ -1,13 +1,36 @@
+{%- comment -%}
+  Styles
+{%- endcomment -%}
+<style>
+  p {
+    text-align: center;
+    color: white;
+    background: black;
+    padding: 5px 0;
+  }
+</style>
+
+
+
+{%- comment -%}
+  markup
+{%- endcomment -%}
 {% if section.settings.show_announcement %}
 
-  {{ section.settings.text | upcase }}
+  <p>
+    {{ section.settings.text | upcase }}
+  </p>
 
 {% endif  %}
 
 
+
+{%- comment -%}
+  schema
+{%- endcomment -%}
 {% schema %}
   {
-    "name": "kazi-ac",
+    "name": "New announcement",
     "settings": [
       {
         "type": "checkbox",
@@ -15,7 +38,7 @@
         "label": "Show announcement",
         "default": true
       }, {
-        "type": "text",
+        "type": "richtext",
         "id": "text",
         "label": "Announcement",
         "default": "Your Announcement"
