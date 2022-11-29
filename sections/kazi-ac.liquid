@@ -2,7 +2,7 @@
   Styles
 {%- endcomment -%}
 <style>
-  p {
+  .textstyle {
     text-align: center;
     color: white;
     background: black;
@@ -17,7 +17,7 @@
 {%- endcomment -%}
 {% if section.settings.show_announcement %}
 
-  <p>
+  <p class="textstyle">
     {{ section.settings.text | upcase }}
   </p>
 
